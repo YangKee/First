@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 
 import com.shianchina.yang.sa.MainActivity;
 import com.shianchina.yang.sa.R;
+import com.shianchina.yang.sa.VideoPlayerActivity;
 
 /**
  * Created by Yang on 2017/3/22.
@@ -43,7 +44,7 @@ public class SplashActivity extends BaseActivity  {
         public void handleMessage(Message msg) {
 
             if (msg.what==1){
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, VideoPlayerActivity.class));
             }
         }
     }

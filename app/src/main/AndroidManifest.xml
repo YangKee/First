@@ -19,6 +19,9 @@
 
 
         <activity android:name="com.shianchina.yang.sa.MainActivity"></activity>
+        <activity android:name="com.shianchina.yang.sa.VideoPlayerActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustNothing">></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

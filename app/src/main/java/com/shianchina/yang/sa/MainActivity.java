@@ -1,6 +1,8 @@
 package com.shianchina.yang.sa;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.shianchina.yang.sa.ui.activity.BaseFragmentActivity;
 
@@ -13,12 +15,18 @@ public class MainActivity extends BaseFragmentActivity {
 
     @Override
     protected int attachLayoutRes() {
-        return 0;
+        return R.layout.activity_main;
     }
 
     @Override
     protected void initViews() {
-
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(MainActivity.this,VideoPlayerActivity.class));
+            }
+        },3000);
     }
 
     @Override
