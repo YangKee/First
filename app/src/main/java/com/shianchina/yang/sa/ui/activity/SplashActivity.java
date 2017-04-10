@@ -20,7 +20,7 @@ public class SplashActivity extends BaseActivity  {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MyHandler myHandler = new MyHandler();
-        myHandler.sendEmptyMessageDelayed(1,2*2000);
+        myHandler.sendEmptyMessageDelayed(2,2*2000);
     }
 
     @Override
@@ -43,8 +43,9 @@ public class SplashActivity extends BaseActivity  {
         @Override
         public void handleMessage(Message msg) {
 
-            if (msg.what==1){
+            if (msg.what==2){
                 startActivity(new Intent(SplashActivity.this, VideoPlayerActivity.class));
+                finish();
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.shianchina.yang.sa;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
@@ -30,9 +31,9 @@ public class VideoPlayerActivity extends BaseFragmentActivity {
     protected void initViews() {
 
         mVideoInfo = new VideoInfo();
-        mVideoInfo.setTitle("袁腾飞《这个历史挺靠谱》");
-        mVideoInfo.setMp4_url("http://flv2.bn.netease.com/videolib3/1501/28/wlncJ2098/SD/wlncJ2098-mobile.mp4");
-        mVideoInfo.setMp4Hd_url("http://flv2.bn.netease.com/videolib3/1501/28/wlncJ2098/HD/wlncJ2098-mobile.mp4");
+        mVideoInfo.setTitle("食安中国");
+        mVideoInfo.setMp4_url("http://sazg.zhongcetianxia.com/video.mp4");
+        mVideoInfo.setMp4Hd_url("http://sazg.zhongcetianxia.com/video.mp4");
 
         mVideoPlayer.init()
                 .setTitle(mVideoInfo.getTitle())
@@ -75,4 +76,12 @@ public class VideoPlayerActivity extends BaseFragmentActivity {
         }
         super.onBackPressed();
     }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mVideoPlayer.configurationChanged(newConfig);
+    }
+
 }
