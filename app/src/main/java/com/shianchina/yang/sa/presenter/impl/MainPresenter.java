@@ -19,6 +19,7 @@ import rx.schedulers.Schedulers;
 public class MainPresenter extends BasePresenterImpl{
     private Context mContext;
     private MainView mMainView;
+    private int mPageIndex = 0;
 
     public MainPresenter(Context context, MainView mainView) {
         mContext = context;
@@ -47,6 +48,6 @@ public class MainPresenter extends BasePresenterImpl{
                         mMainView.loadData(placeSearchList);
                     }
                 });
-//        addSubscription(subscription);
+        addSubscription(subscription);
     }
 }
